@@ -41,7 +41,7 @@ main{
 .cards{
     width: 100%;
     min-height: 200px;
-    background: blue;
+    background: rgb(73, 73, 255);
 }
 
 .a{
@@ -68,6 +68,13 @@ main{
     grid-area: f;
 }
 
+.nav-ul {
+    display: none;
+}
+
+/*
+    Tablet version
+*/
 @media screen and (min-width: 641px) {
     main{
         grid-template-areas:
@@ -76,14 +83,51 @@ main{
     "e e"
     "f f"   ;
     }
+
+    .cards{
+        width: 100%;
+        min-height: 200px;
+        background: rgb(109, 109, 223);
+    }
 }
 
+/*
+    desktop version
+*/
 @media screen and (min-width: 1008px) {
     main{
     grid-template-columns: repeat(4,1fr);   
     grid-template-areas:
-    "a a a a"
-    "b c d e"
-    "f f f f"  ;
+    "a b c d"
+    "e f g h"
+    "i j k l"  ;
     }
+
+    .cards{
+        width: 100%;
+        min-height: 200px;
+        background: rgb(161, 161, 240);
+    }
+
+    .nav-ul {
+        display: flex;
+        /* background-color: teal; */
+        width: 40%;
+        justify-content: space-around;
+    }
+
+    .nav-ul {
+        list-style: none;
+        font-size: medium;
+    }
+
+    .nav-ul li:hover {
+        /* border-bottom: 1px solid rgb(50, 50, 61); */
+        cursor: pointer;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
 }
